@@ -59,6 +59,8 @@ const baseConfig = {
     rules: [configureBabelLoader()]
   },
   plugins: [
+    new webpack.ProgressPlugin(),
+    new CleanWebpackPlugin(),
     new WebpackNotifierPlugin({
       title: `${pkg.name} ${process.env.NODE_ENV}`,
       excludeWarnings: true,
