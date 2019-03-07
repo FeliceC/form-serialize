@@ -21,20 +21,29 @@ export default class SerializeForm {
   }
 
   static getFormDataArray(form) {
-    return [...form.map(data => {
-      const tempData = data.split('=');
-      return {
-        name: tempData[0],
-        value: tempData[1]
-      };
-    })];
+    return [
+      ...form.map(data => {
+        const tempData = data.split('=');
+        return {
+          name: tempData[0],
+          value: tempData[1]
+        };
+      })
+    ];
   }
 
   static getFormDataObject(form) {
     const formData = {};
     form.forEach(data => {
       const tempData = data.split('=');
-      formData[tempData[0]] = tempData[1];
+      if (formData[tempData[0]]) {
+        const newArrayString = `${
+          typeof formData[tempData[0]] === 'object' ? formData[tempData[0]].join('&') : formData[tempData[0]]
+        }&${tempData[1]}`;
+        formData[tempData[0]] = newArrayString.split('&');
+      } else {
+        formData[tempData[0]] = tempData[1];
+      }
     });
 
     return formData;
