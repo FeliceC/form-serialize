@@ -1,12 +1,11 @@
 {
-  "name": "form-serialize",
-  "version": "0.0.1",
+  "name": "string-form-serialize",
+  "version": "0.1.0",
   "description": "Simple form serialization without jquery",
   "repository": "https://github.com/FeliceC/form-serialize.git",
   "author": "Felice Caricati <felice.caricati@openmindonline.it>",
   "license": "MIT",
-  "private": true,
-  "main": "dist/form-serialize.umd.js",
+  "main": "dist/form-serialize.js",
   "scripts": {
     "dev": "webpack --config webpack.dev.js",
     "build": "webpack -p --progress --config webpack.prod.js"
