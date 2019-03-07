@@ -1,6 +1,6 @@
 {
   "name": "string-form-serialize",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple form serialization without jquery",
   "repository": "https://github.com/FeliceC/form-serialize.git",
   "author": "Felice Caricati <felice.caricati@openmindonline.it>",
