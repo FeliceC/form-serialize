@@ -17,6 +17,10 @@
     "@babel/runtime": "^7.3.4",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^2.0.0",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-compat": "^2.7.0",
+    "eslint-plugin-import": "^2.16.0",
     "terser-webpack-plugin": "^1.2.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
@@ -44,6 +48,7 @@
     "rules": {
       "compat/compat": "error",
       "no-useless-constructor": "off",
+      "prefer-destructuring": "off",
       "no-restricted-syntax": "off",
       "no-console": "error",
       "no-debugger": "error",
