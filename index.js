@@ -5,10 +5,23 @@ export default class SerializeForm {
     };
   }
 
+  /**
+   * Creates an instance of SerializeForm.
+   *
+   * @constructor
+   * @this {SerializeForm}
+   * @param {Element} form The form element to seriaize
+   */
   constructor(form) {
     this.form = SerializeForm.serialize(form);
   }
 
+  /**
+   * Get the form serialization data by format
+   *
+   * @param {String} dataType The data type to return ('array', 'object' or null to default string)
+   * @returns {any}
+   */
   getData(dataType) {
     switch (dataType) {
       case 'array':
