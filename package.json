@@ -10,13 +10,15 @@
     "dev": "webpack --config webpack.dev.js",
     "build": "webpack -p --progress --config webpack.prod.js",
     "test": "jest",
-    "test:coverage": "npm test -- --coverage"
+    "test:coverage": "npm test -- --coverage",
+    "test:badges": "npm run test:coverage  && jest-coverage-badges"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/plugin-transform-runtime": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/runtime": "^7.3.4",
+    "babel-jest": "^24.5.0",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^2.0.0",
     "eslint": "^5.15.1",
@@ -24,7 +26,7 @@
     "eslint-plugin-compat": "^2.7.0",
     "eslint-plugin-import": "^2.16.0",
     "jest": "^24.5.0",
-    "babel-jest": "^24.5.0",
+    "jest-coverage-badges": "^1.1.2",
     "terser-webpack-plugin": "^1.2.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
@@ -44,6 +46,9 @@
       "!**/dist/**",
       "!**/jest-coverage-report/**",
       "!webpack.*.js"
+    ],
+    "coverageReporters": [
+      "json-summary"
     ]
   },
   "eslintConfig": {

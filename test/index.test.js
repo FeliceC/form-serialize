@@ -8,6 +8,16 @@ const fakeForm = `<form id="myForm" name="myForm">
 <input type="file" id="userfile" name="userfile">
 <input type="radio" name="radioButton">
 <input type="submit" value="Submit!">
+<select name="mySelect">
+  <option value="option 1">option 1</option>
+  <option value="option 2" selected>option 2</option>
+  <option value="option 3">option 3</option>
+</select>
+<select name="myMultipleSelect" multiple>
+  <option value="option 1">option 1</option>
+  <option value="option 2" selected>option 2</option>
+  <option value="option 3" selected>option 3</option>
+</select>
 </form>`;
 container.innerHTML = fakeForm;
 document.body.appendChild(container);
@@ -22,23 +32,33 @@ describe('Form serialization', () => {
     }, {
       name: 'userPassword',
       value: 'myPassword'
-    }];
-    expect(formArray).toEqual(
-      expect.arrayContaining(expectedResult),
-    );
+    }, {
+      name: 'mySelect',
+      value: 'option 2'
+    },
+    {
+      name: 'myMultipleSelect',
+      value: 'option 2'
+    }, {
+      name: 'myMultipleSelect',
+      value: 'option 3'
+    }
+    ];
+    expect(formArray).toEqual(expectedResult);
   });
   test('as object', () => {
     const formObject = serialize.getData('object');
     const expectedResult = {
       userName: 'myName',
-      userPassword: 'myPassword'
+      userPassword: 'myPassword',
+      mySelect: 'option 2',
+      myMultipleSelect: ['option 2', 'option 3']
     };
     expect(formObject).toEqual(expectedResult);
   });
   test('as string', () => {
     const formString = serialize.getData();
-    console.log(formString);
-    const expectedResult = 'userName=myName&userPassword=myPassword';
+    const expectedResult = 'userName=myName&userPassword=myPassword&mySelect=option 2&myMultipleSelect=option 2&myMultipleSelect=option 3';
     expect(formString).toEqual(expectedResult);
   });
 });
