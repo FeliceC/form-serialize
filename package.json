@@ -8,7 +8,9 @@
   "main": "dist/form-serialize.js",
   "scripts": {
     "dev": "webpack --config webpack.dev.js",
-    "build": "webpack -p --progress --config webpack.prod.js"
+    "build": "webpack -p --progress --config webpack.prod.js",
+    "test": "jest",
+    "test:coverage": "npm test -- --coverage"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -21,6 +23,8 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-compat": "^2.7.0",
     "eslint-plugin-import": "^2.16.0",
+    "jest": "^24.5.0",
+    "babel-jest": "^24.5.0",
     "terser-webpack-plugin": "^1.2.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
@@ -31,6 +35,17 @@
     "last 1 version",
     "IE 11"
   ],
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "index.js",
+      "!**/node_modules/**",
+      "!**/dist/**",
+      "!**/jest-coverage-report/**",
+      "!webpack.*.js"
+    ]
+  },
   "eslintConfig": {
     "extends": "airbnb-base",
     "env": {
