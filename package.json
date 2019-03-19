@@ -30,8 +30,7 @@
     "terser-webpack-plugin": "^1.2.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
-    "webpack-merge": "^4.2.1",
-    "webpack-notifier": "^1.7.0"
+    "webpack-merge": "^4.2.1"
   },
   "browserslist": [
     "last 1 version",
