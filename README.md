@@ -3,7 +3,7 @@
 ![Coverage branches](./coverage/badge-branches.svg)
 ![Coverage statements](./coverage/badge-statements.svg)
 [![Build
-Status](https://travis-ci.com/frappacchio/form-serialize.svg?branch=master)](https://travis-ci.com/frappacchio/form-serialize)
+Status](https://travis-ci.com/frappacchio/form-serialize.svg?branch=develop)](https://travis-ci.org/frappacchio/form-serialize)
 # Index
 
 - [Installation](#installation)
