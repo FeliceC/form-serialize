@@ -41,7 +41,7 @@
     "verbose": true,
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "index.js",
+      "**/*.{js}",
       "!**/node_modules/**",
       "!**/dist/**",
       "!**/jest-coverage-report/**",
@@ -84,7 +84,10 @@
       "arrow-body-style": [
         "error",
         "as-needed"
-      ]
+      ],
+      "import/no-extraneous-dependencies": ["error", {
+        "devDependencies": true
+      }]
     }
   }
 }
