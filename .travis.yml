@@ -2,6 +2,8 @@ sudo: false
 language: node_js
 node_js:
 - 10.14.2
+install:
+  - npm install -g codecov
 deploy:
   provider: npm
   email: felice.caricati@gmail.com
