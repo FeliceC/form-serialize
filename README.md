@@ -46,4 +46,4 @@ console.log(seralize.getData()); // 'name=My awesome name&surname=My awesome sur
 
 # License
 
-[Apache License](/LICENSE.md)
+[Apache License](/LICENSE)
