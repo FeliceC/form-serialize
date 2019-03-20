@@ -10,3 +10,5 @@ deploy:
   on:
     tags: true
     repo: FeliceC/form-serialize
+after_success:
+  - codecov
