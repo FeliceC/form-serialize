@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "Simple form serialization without jquery",
   "repository": "https://github.com/FeliceC/form-serialize.git",
-  "author": "Felice Caricati <felice.caricati@gmail.coim.it>",
+  "author": "Felice Caricati <felice.caricati@gmail.com>",
   "license": "APACHE 2.0",
   "main": "dist/form-serialize.js",
   "scripts": {
