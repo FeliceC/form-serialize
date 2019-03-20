@@ -4,6 +4,7 @@ node_js:
 - 10.14.2
 install:
   - npm install -g codecov
+  - yarn install
 deploy:
   provider: npm
   email: felice.caricati@gmail.com
