@@ -2,16 +2,3 @@ sudo: false
 language: node_js
 node_js:
 - 10.14.2
-cache:
-  directories:
-  - node_modules
-install:
-- yarn install
-deploy:
-  provider: npm
-  email: felice.caricati@gmail.com
-  api_key:
-    secure: hnmwIJ3o/lCHjTX2RoIXKTQyk1ocwZNqFw/CS7i+RcNpmYyEr2Z/oGj6A8CrLI3XPYUvkquwdkWMDqv9Bc9cJUtb0kVldNoIeGqeEHGbyKzX3IkaEwVa+CPDy1WevF45NjGgArHA3rF5EDxi4dOFdh0W4E6Ifbqk/obZt601ZWqIGwhWQrEL7+WHQxzDS7zCBnylIKWkPl+c47F7qnZR4t0a6ocZ5DGsusQXo/EDx8TPil+4Rfvz+ntJiNMGGTYcWFvNC/q0N86dFP2cX7tz89f32lTQ7C5eBTMLmN8crrkQvXrrzel6L3zkLtcI1R+9VCze75PPkpTdfNrpfH8aSeuDTxzsCQnXvJofa0NJ1YXrv8UIuNF33bKf1p/C3VKLoVFVlL/fMh38Ozwa7BH9qJI0RVwKT8Wz9zwQruVKdtX1E3NgIcTudMcK9q+qr1yCSdE3fsBJWGiF9RoF5bvW/ZXw5b3jSAjyMDGuYAkGbQM2+SZvr6//0ueMxqTX52ta6lw1yQwlCsF7lqSEyhWLtS5VvFY4ha6a+Ev1EkSd+kvPnZh9wLprtaTLoMxM3QmAMw+jt+STzJZ/ODYFJLP86fQbxLC3xQUEQAZn0HlYbVLc/ghf8vEUtbECJsg8uVMMxepP8pipsoskWKT4AMsF9KBqPJennmyAOOJ8/PbwZn8=
-  on:
-    tags: true
-    repo: FeliceC/form-serialize
