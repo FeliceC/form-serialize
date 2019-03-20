@@ -1,7 +1,4 @@
-![Coverage lines](/coverage/badge-lines.svg)
-![Coverage functions](/coverage/badge-functions.svg)
-![Coverage branches](/coverage/badge-branches.svg)
-![Coverage statements](/coverage/badge-statements.svg)
+[![codecov](https://codecov.io/gh/FeliceC/form-serialize/branch/master/graph/badge.svg)](https://codecov.io/gh/FeliceC/form-serialize)
 [![Build Status](https://travis-ci.org/FeliceC/form-serialize.svg?branch=master)](https://travis-ci.org/FeliceC/form-serialize)
 # Index
 
