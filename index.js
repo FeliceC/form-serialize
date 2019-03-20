@@ -50,15 +50,12 @@ export default class SerializeForm {
     form.forEach(data => {
       const tempData = data.split('=');
       if (formData[tempData[0]]) {
-        const newArrayString = `${
-          typeof formData[tempData[0]] === 'object' ? formData[tempData[0]].join('&') : formData[tempData[0]]
-        }&${tempData[1]}`;
+        const newArrayString = `${typeof formData[tempData[0]] === 'object' ? formData[tempData[0]].join('&') : formData[tempData[0]]}&${tempData[1]}`;
         formData[tempData[0]] = newArrayString.split('&');
       } else {
         formData[tempData[0]] = tempData[1];
       }
     });
-
     return formData;
   }
 
@@ -75,10 +72,11 @@ export default class SerializeForm {
     if (SerializeForm.isValidForm(form)) {
       [...form.elements].forEach(el => {
         if (SerializeForm.isvalidElement(el)) {
-          if ((el.type !== 'checkbox' && el.type !== 'radio') || el.checked) {
+          if ((el.type !== 'checkbox' && el.type !== 'radio' && el.type !== 'select-multiple') || el.checked) {
             data.push(`${el.name}=${el.value}`);
           } else if (el.type === 'select-multiple') {
-            el.options.forEach(opt => {
+            const elementOptions = Array.from(el.options);
+            elementOptions.forEach(opt => {
               if (opt.selected) data.push(`${el.name}=${opt.value}`);
             });
           }

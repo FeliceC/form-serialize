@@ -1,3 +1,8 @@
+![Coverage lines](./coverage/badge-lines.svg)
+![Coverage functions](./coverage/badge-functions.svg)
+![Coverage branches](./coverage/badge-branches.svg)
+![Coverage statements](./coverage/badge-statements.svg)
+[![Build Status](https://travis-ci.org/frappacchio/form-serialize.svg?branch=develop)](https://travis-ci.org/frappacchio/form-serialize)
 # Index
 
 - [Installation](#installation)
