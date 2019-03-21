@@ -5,6 +5,7 @@ node_js:
 install:
   - npm install -g codecov
   - yarn install
+  - yarn build
 deploy:
   provider: npm
   email: felice.caricati@gmail.com
