@@ -18,7 +18,7 @@
     "@babel/runtime": "^7.3.4",
     "babel-jest": "^24.5.0",
     "babel-loader": "^8.0.5",
-    "clean-webpack-plugin": "^2.0.0",
+    "clean-webpack-plugin": "^2.0.1",
     "eslint": "^5.15.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-compat": "^2.7.0",

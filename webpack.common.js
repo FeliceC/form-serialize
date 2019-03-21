@@ -1,8 +1,12 @@
 const path = require('path');
-const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const WebpackNotifierPlugin = require('webpack-notifier');
 const pkg = require('./package.json');
+
+const configureCleanWebpack = () => ({
+  verbose: true,
+  dry: false,
+  watch: false
+});
 
 
 // Configure Babel loader
@@ -47,7 +51,10 @@ const baseConfig = {
   },
   module: {
     rules: [configureBabelLoader()]
-  }
+  },
+  plugins: [
+    new CleanWebpackPlugin(configureCleanWebpack())
+  ]
 };
 
 module.exports = {
