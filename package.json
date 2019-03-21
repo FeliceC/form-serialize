@@ -1,6 +1,6 @@
 {
   "name": "form-serialize-all",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Simple form serialization without jquery",
   "repository": "https://github.com/FeliceC/form-serialize.git",
   "author": "Felice Caricati <felice.caricati@gmail.com>",
@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "webpack --config webpack.dev.js",
     "build": "webpack -p --progress --config webpack.prod.js",
-    "test": "jest"
+    "test": "jest",
+    "docs": "jsdoc2md --files ./index.js --plugin dmd-globals-docs > DOCS.md"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -19,12 +20,14 @@
     "babel-jest": "^24.5.0",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^2.0.1",
+    "dmd-globals-docs": "^1.0.0",
     "eslint": "^5.15.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-compat": "^2.7.0",
     "eslint-plugin-import": "^2.16.0",
     "jest": "^24.5.0",
     "jest-coverage-badges": "^1.1.2",
+    "jsdoc-to-markdown": "^4.0.1",
     "terser-webpack-plugin": "^1.2.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
