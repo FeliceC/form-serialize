@@ -4,7 +4,8 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
+- [Docs](DOCS.md)
+- [License](/LICENSE)
 
 # Installation
 
@@ -40,7 +41,3 @@ console.log(seralize.getData('array')); // [{name:'My awesome name'}, {surname:'
 console.log(seralize.getData('object')); //{name:'My awesome name', surname:'My awesome surname', modest:'I am the most modest person in the world'}
 console.log(seralize.getData()); // 'name=My awesome name&surname=My awesome surname&modest=I am the most modest person in the world'
 ```
-
-# License
-
-[Apache License](/LICENSE)

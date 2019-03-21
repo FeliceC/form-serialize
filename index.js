@@ -10,7 +10,7 @@ export default class SerializeForm {
    *
    * @constructor
    * @this {SerializeForm}
-   * @param {Element} form The form element to seriaize
+   * @param {HTMLFormElement} form The form element to seriaize
    */
   constructor(form) {
     this.form = SerializeForm.serialize(form);
@@ -19,8 +19,8 @@ export default class SerializeForm {
   /**
    * Get the form serialization data by format
    *
-   * @param {String} dataType The data type to return ('array', 'object' or null to default string)
-   * @returns {any}
+   * @param {String} dataType - The data type to return ('array', 'object' or null to default string)
+   * @returns {(String|Array|Object)}
    */
   getData(dataType) {
     switch (dataType) {
@@ -33,6 +33,11 @@ export default class SerializeForm {
     }
   }
 
+  /**
+ *
+ * @param {HTMLFormElement} form
+ * @return {Array<Object>}
+ */
   static getFormDataArray(form) {
     return [
       ...form.map(data => {
@@ -45,6 +50,10 @@ export default class SerializeForm {
     ];
   }
 
+  /**
+ *
+ * @param {HTMLFormElement} form
+ */
   static getFormDataObject(form) {
     const formData = {};
     form.forEach(data => {
@@ -59,14 +68,29 @@ export default class SerializeForm {
     return formData;
   }
 
+  /**
+ *
+ * @param {HTMLFormElement} form
+ * @return {boolean}
+ */
   static isValidForm(form) {
     return typeof form === 'object' && form.nodeName === 'FORM';
   }
 
+  /**
+ *
+ * @param {HTMLElement} el
+ * @return {boolean}
+ */
   static isvalidElement(el) {
     return el.name && !el.disabled && !SerializeForm.BLACK_LIST.elements.includes(el.type);
   }
 
+  /**
+ *
+ * @param {HTMLFormElement} form
+ * @return {Array<Object>}
+ */
   static serialize(form) {
     const data = [];
     if (SerializeForm.isValidForm(form)) {
