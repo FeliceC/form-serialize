@@ -34,6 +34,33 @@ export default class SerializeForm {
   }
 
   /**
+   * Get the form serialization data string
+   *
+   * @returns {String}
+   */
+  get toString() {
+    return this.form.join('&').replace(/%20/g, '+');
+  }
+
+  /**
+   * Get the form serialization data array
+   *
+   * @returns {Array}
+   */
+  get toArray() {
+    return SerializeForm.getFormDataArray(this.form);
+  }
+
+  /**
+   * Get the form serialization data object
+   *
+   * @returns {Object}
+   */
+  get toObject() {
+    return SerializeForm.getFormDataObject(this.form);
+  }
+
+  /**
  *
  * @param {HTMLFormElement} form
  * @return {Array<Object>}
