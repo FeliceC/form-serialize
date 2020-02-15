@@ -25,7 +25,7 @@ const myFormElement = document.getElementById('myForm');
 const serialize = new SerializeForm(myFormElement);
 describe('Form serialization', () => {
   test('as array', () => {
-    const formArray = serialize.getData('array');
+    const formArray = serialize.toArray();
     const expectedResult = [{
       name: 'userName',
       value: 'myName'
@@ -47,7 +47,7 @@ describe('Form serialization', () => {
     expect(formArray).toEqual(expectedResult);
   });
   test('as object', () => {
-    const formObject = serialize.getData('object');
+    const formObject = serialize.toObject();
     const expectedResult = {
       userName: 'myName',
       userPassword: 'myPassword',
@@ -57,7 +57,7 @@ describe('Form serialization', () => {
     expect(formObject).toEqual(expectedResult);
   });
   test('as string', () => {
-    const formString = serialize.getData();
+    const formString = serialize.toString();
     const expectedResult = 'userName=myName&userPassword=myPassword&mySelect=option 2&myMultipleSelect=option 2&myMultipleSelect=option 3';
     expect(formString).toEqual(expectedResult);
   });
