@@ -1,3 +1,17 @@
+## Members
+
+<dl>
+<dt><a href="#toString">toString</a> ⇒ <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code></dt>
+<dd><p>Get the form serialization data string</p>
+</dd>
+<dt><a href="#toArray">toArray</a> ⇒ <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code></dt>
+<dd><p>Get the form serialization data array</p>
+</dd>
+<dt><a href="#toObject">toObject</a> ⇒ <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code></dt>
+<dd><p>Get the form serialization data object</p>
+</dd>
+</dl>
+
 ## Functions
 
 <dl>
@@ -16,6 +30,24 @@
 <dd></dd>
 </dl>
 
+<a name="toString"></a>
+
+## toString ⇒ [<code>String</code>](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)
+Get the form serialization data string
+
+**Kind**: global variable  
+<a name="toArray"></a>
+
+## toArray ⇒ [<code>Array</code>](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)
+Get the form serialization data array
+
+**Kind**: global variable  
+<a name="toObject"></a>
+
+## toObject ⇒ [<code>Object</code>](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)
+Get the form serialization data object
+
+**Kind**: global variable  
 <a name="getData"></a>
 
 ## getData(dataType) ⇒ [<code>String</code>](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [<code>Array</code>](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) \| [<code>Object</code>](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)

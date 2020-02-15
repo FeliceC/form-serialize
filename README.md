@@ -37,7 +37,7 @@ import SerializeForm from 'form-serialize-all';
 const myFormElement = document.querySelector('.example-form');
 const seralize = new SerializeForm(myFormElement);
 
-console.log(seralize.getData('array')); // [{name:'My awesome name'}, {surname:'My awesome surname'}, {modest:'I am the most modest person in the world'}]
-console.log(seralize.getData('object')); //{name:'My awesome name', surname:'My awesome surname', modest:'I am the most modest person in the world'}
-console.log(seralize.getData()); // 'name=My awesome name&surname=My awesome surname&modest=I am the most modest person in the world'
+console.log(seralize.toArray()); // [{name:'My awesome name'}, {surname:'My awesome surname'}, {modest:'I am the most modest person in the world'}]
+console.log(seralize.toObject()); //{name:'My awesome name', surname:'My awesome surname', modest:'I am the most modest person in the world'}
+console.log(seralize.toString()); // 'name=My awesome name&surname=My awesome surname&modest=I am the most modest person in the world'
 ```
